@@ -185,3 +185,11 @@ function getAnalytics(bizId) {
   const analytics = getObj(KEYS.analytics);
   return analytics[bizId] || { views: 0, shares: 0 };
 }
+
+function getAllBusinesses() {
+  return getAll(KEYS.businesses);
+}
+
+function getBusinessById(id) {
+  return getAllBusinesses().find(b => b.id === id) || null;
+}
